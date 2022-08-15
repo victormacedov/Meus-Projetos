@@ -15,6 +15,9 @@ while True:
         if soma % 2 == 0:
             print(f'Você venceu!')
             contvitorias += 1
+            pergunta = (input('Você deseja continuar jogando? [S/N]')).strip().upper()[0]
+            if pergunta == "N":
+                break
         else:
             print('Você perdeu!')
             pergunta = (input('Você deseja continuar jogando? [S/N]')).strip().upper()[0]
@@ -24,10 +27,12 @@ while True:
         if soma % 2 == 1:
             print('Você venceu!')
             contvitorias += 1
+            pergunta = (input('Você deseja continuar jogando? [S/N]')).strip().upper()[0]
+            if pergunta == "N":
+                break
         else:
             print('Você perdeu!')
             pergunta = (input('Você deseja continuar jogando? [S/N]')).strip().upper()[0]
             if pergunta == "N":
                 break
-        print('vamos jogar novamente...')
 print(f'O jogo acabou! Você venceu {contvitorias} vezes')
